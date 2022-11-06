@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="364e28fc-3f0d-4760-80ba-266c98022ab5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/core/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/core/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/Authenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/database/UserDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/database/UserDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/database/VehicleDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/database/VehicleDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/gui/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/gui/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2022.10.15-carRent/pl/camp/it/car/rent/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/database/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/database/UserDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/database/VehicleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/database/VehicleDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/gui/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/camp/it/car/rent/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/camp/it/car/rent/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

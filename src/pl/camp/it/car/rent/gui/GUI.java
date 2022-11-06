@@ -5,6 +5,7 @@ import pl.camp.it.car.rent.database.VehicleDB;
 import pl.camp.it.car.rent.model.*;
 import pl.camp.it.car.rent.model.builders.MotorcycleBuilder;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class GUI {
@@ -18,7 +19,7 @@ public class GUI {
         System.out.println("4. Exit");
     }
 
-    public static void listVehicles(Vehicle[] vehicles) {
+    public static void listVehicles(List<Vehicle> vehicles) {
         for(Vehicle currentVehicle : vehicles) {
             System.out.println(currentVehicle);
         }
