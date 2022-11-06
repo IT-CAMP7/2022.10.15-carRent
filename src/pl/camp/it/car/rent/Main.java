@@ -19,7 +19,7 @@ public class Main {
         String hash = DigestUtils.md5Hex("janusz");
         System.out.println(hash);
 
-        System.out.println(DigestUtils.md5Hex("admin" + Authenticator.seed));
+        System.out.println(DigestUtils.md5Hex("janusz" + Authenticator.seed));
 
         int x = 5;
         boolean y;

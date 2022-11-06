@@ -1,15 +1,16 @@
 package pl.camp.it.car.rent;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import pl.camp.it.car.rent.database.UserDB;
 import pl.camp.it.car.rent.gui.GUI;
 import pl.camp.it.car.rent.model.User;
+
+import java.io.IOException;
 
 public class Authenticator {
     public static final String seed = "1Tl8*G3Ertpxvj0%8qpy";
     public static User loggedUser;
 
-    public static boolean authenticate(UserDB userDB) {
+    public static boolean authenticate(UserDB userDB) throws IOException {
 
         for(int i = 0; i < 3; i++) {
             User user = GUI.readLoginAndPassword();

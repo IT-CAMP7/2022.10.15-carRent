@@ -1,0 +1,10 @@
+Car;Audi;A3;2005;true;KR11;300.0
+Car;BMW;3;2006;false;KR22;250.0
+Car;Toyota;Corolla;2010;true;KR33;200.0
+Car;Mercedes;C;2020;false;KR44;500.0
+Car;Kia;Ceed;2011;false;KR55;300.0
+Bus;Solaris;2000;2010;false;KR66;500.0;52
+Bus;Solaris;3000;2011;false;KR77;550.0;62
+Motorcycle;Suzuki;5000;2016;false;KR88;400.0;true
+Car;shjgdfg;likuajhsd;2344;false;sadfasd;1223.23
+Car;asdfasd;asdf;123;false;asdfsd;123.23

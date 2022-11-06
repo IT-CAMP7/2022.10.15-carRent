@@ -1,35 +1,33 @@
 package pl.camp.it.car.rent.database;
 
+import pl.camp.it.car.rent.exceptions.IllegalDataInDatabaseFile;
 import pl.camp.it.car.rent.model.Bus;
 import pl.camp.it.car.rent.model.Car;
 import pl.camp.it.car.rent.model.Motorcycle;
 import pl.camp.it.car.rent.model.Vehicle;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleDB {
     private final List<Vehicle> vehicles = new ArrayList<>();
+    private final String VEHICLE_DB_FILE = "vehicles.txt";
 
     public VehicleDB() {
-        this.vehicles.add(new Car("Audi", "A3",
-                2005, "KR11", 300.00));
-        this.vehicles.add(new Car("BMW", "3",
-                2006, "KR22", 250.00));
-        this.vehicles.add(new Car("Toyota", "Corolla",
-                2010, "KR33", 200.00));
-        this.vehicles.add(new Car("Mercedes", "C",
-                2020, "KR44", 500.00));
-        this.vehicles.add(new Car("Kia", "Ceed",
-                2011, "KR55", 300.00));
-
-        this.vehicles.add(new Bus("Solaris", "2000",
-                2010, "KR66", 500.00, 52));
-        this.vehicles.add(new Bus("Solaris", "3000",
-                2011, "KR77", 550.00, 62));
-
-        this.vehicles.add(new Motorcycle("Suzuki", "5000",
-                2016, "KR88", 400.00, true));
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(VEHICLE_DB_FILE));
+            String line;
+            while((line = reader.readLine()) != null) {
+                Vehicle vehicle = convertDataToVehicle(line);
+                if(vehicle != null) {
+                    this.vehicles.add(vehicle);
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("plik nie dziala !!");
+        }
     }
 
     public boolean rentVehicle(String plate) {
@@ -49,5 +47,50 @@ public class VehicleDB {
 
     public List<Vehicle> getVehicles() {
         return vehicles;
+    }
+
+    public void persistToFile() {
+        try {
+            BufferedWriter writer =
+                    new BufferedWriter(new FileWriter(this.VEHICLE_DB_FILE));
+            /*boolean flag = false;
+            for(Vehicle vehicle : this.vehicles) {
+                if(flag) {
+                    writer.newLine();
+                }
+                flag = true;
+                writer.write(vehicle.convertToData());
+            }*/
+            writer.write(this.vehicles.get(0).convertToData());
+            for(int i = 1; i < this.vehicles.size(); i++) {
+                writer.newLine();
+                writer.write(this.vehicles.get(i).convertToData());
+                writer.flush();
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Cos sie zepsulo podczas zapisu");
+            e.printStackTrace();
+        }
+    }
+
+    private Vehicle convertDataToVehicle(String data) {
+        String[] vehicleData = data.split(";");
+        switch(vehicleData[0]) {
+            case "Car":
+                return new Car(vehicleData);
+            case "Bus":
+                return new Bus(vehicleData);
+            case "Motorcycle":
+                return new Motorcycle(vehicleData);
+            default:
+                try {
+                    throw new IllegalDataInDatabaseFile();
+                } catch (IllegalDataInDatabaseFile e) {
+                    e.printStackTrace();
+                }
+                return null;
+                //System.out.println("Corrupted line in DB: " + line);
+        }
     }
 }

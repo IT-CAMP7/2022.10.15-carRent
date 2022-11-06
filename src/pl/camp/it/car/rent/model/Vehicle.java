@@ -8,12 +8,11 @@ public class Vehicle {
     private String plate;
     private double price;
 
-    public Vehicle(String brand, String model, int year,
-               String plate, double price) {
+    public Vehicle(String brand, String model, int year, boolean rent, String plate, double price) {
         this.brand = brand;
         this.model = model;
         this.year = year;
-        this.rent = false;
+        this.rent = rent;
         this.plate = plate;
         this.price = price;
     }
@@ -80,6 +79,24 @@ public class Vehicle {
                 .append(this.getPlate())
                 .append(" Dostepny: ")
                 .append(this.rent ? "Nie" : "Tak")
+                .toString();
+    }
+
+    public String convertToData() {
+        return new StringBuilder()
+                .append(this.getClass().getSimpleName())
+                .append(";")
+                .append(this.brand)
+                .append(";")
+                .append(this.model)
+                .append(";")
+                .append(this.year)
+                .append(";")
+                .append(this.rent)
+                .append(";")
+                .append(this.plate)
+                .append(";")
+                .append(this.price)
                 .toString();
     }
 }

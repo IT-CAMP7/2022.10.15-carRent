@@ -56,6 +56,16 @@ public class User {
                         .md5Hex(temp.password + Authenticator.seed));
     }
 
+    public String convertToData() {
+        return new StringBuilder()
+                .append(this.login)
+                .append(";")
+                .append(this.password)
+                .append(";")
+                .append(this.role)
+                .toString();
+    }
+
     public enum Role {
         ADMIN,
         USER
